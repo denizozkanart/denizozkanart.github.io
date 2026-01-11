@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deniz Ozkan – Lead 3D Artist & Technical Art Specialist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary: #111;
+            --secondary: #666;
+            --accent: #2563eb;
+            /* Professional Blue */
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #f3f4f6;
+                --secondary: #9ca3af;
+                --accent: #60a5fa;
+                --bg-body: #111827;
+                --bg-card: #1f2937;
+                --border: #374151;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--primary);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        /* HEADER */
+        .header {
+            padding: 20px 25px 30px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-main h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .header-main h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .header-tagline {
+            font-size: 13px;
+            color: var(--secondary);
+            max-width: 600px;
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 13px;
+            color: var(--secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 0;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        /* LAYOUT */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr;
+            /* Left: Experience, Right: Skills */
+        }
+
+        .main-col {
+            padding: 40px 25px;
+            border-right: 1px solid var(--border);
+        }
+
+        .side-col {
+            padding: 40px 25px;
+            background-color: rgba(0, 0, 0, 0.015);
+        }
+
+        /* SECTIONS */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* SUMMARY */
+        .summary p {
+            font-size: 15px;
+            color: var(--secondary);
+            line-height: 1.7;
+        }
+
+        /* EXPERIENCE ITEMS */
+        .job-item {
+            margin-bottom: 32px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--border);
+        }
+
+        .job-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .job-date {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary);
+            white-space: nowrap;
+        }
+
+        .job-company {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .job-desc {
+            list-style: none;
+        }
+
+        .job-desc li {
+            font-size: 14px;
+            color: var(--secondary);
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 16px;
+            line-height: 1.5;
+        }
+
+        .job-desc li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* SKILLS PILLS */
+        .skill-category {
+            margin-bottom: 24px;
+        }
+
+        .skill-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-cat-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-pill {
+            font-size: 11px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        /* EDUCATION & LANG */
+        .edu-item,
+        .lang-item {
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .edu-school {
+            font-weight: 600;
+            color: var(--primary);
+            display: block;
+        }
+
+        .edu-degree {
+            color: var(--secondary);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                text-align: left;
+            }
+
+            .contact-info {
+                text-align: left;
+                margin-top: 16px;
+            }
+
+            .main-col,
+            .side-col {
+                padding: 30px;
+                border: none;
+            }
+        }
+
+        /* PRINT STYLES - Optimized for 2 Pages */
+        @media print {
+            @page {
+                margin: 0.5cm;
+            }
+
+            body {
+                padding: 0 !important;
+                margin: 0 !important;
+                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                zoom: 1;
+                /* Keep scale, but squeeze vertical space */
+                line-height: 1.35;
+                /* Tighter lines accumulate space savings */
+            }
+
+            .container {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+
+            /* Force Header to be Centered & Clean for Print */
+            .header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 10px 25px 8px;
+                /* Tighter header */
+                border-bottom: 2px solid #ddd;
+            }
+
+            .header-main {
+                width: 100%;
+                margin-bottom: 4px;
+            }
+
+            .header-main h1 {
+                color: #000;
+                font-size: 26px;
+                /* Smaller Main Title */
+                margin-bottom: 2px;
+            }
+
+            .header-main h2 {
+                color: #2563eb;
+                font-size: 14px;
+                margin-bottom: 4px;
+            }
+
+            .header-tagline {
+                margin: 0 auto 2px !important;
+                max-width: 95%;
+                line-height: 1.1 !important;
+                padding-bottom: 0 !important;
+            }
+
+            /* Transform Contact Info into a Horizontal Row */
+            .contact-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+                width: 100%;
+                text-align: center;
+                font-size: 11px;
+                /* Slightly smaller contact info */
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+
+            .contact-info a,
+            .contact-info span {
+                color: #333;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            /* Add visual separators between main items if needed, but gap is usually enough for clean look */
+
+            /* SPACE SAVING FOR 2-PAGE PRINT */
+            .section {
+                margin-bottom: 10px !important;
+                /* Keeps titles with their content */
+            }
+
+            .job-item {
+                margin-bottom: 10px !important;
+                page-break-inside: avoid;
+                /* Prevents splitting jobs across pages */
+            }
+
+            .job-desc li {
+                margin-bottom: 1px !important;
+            }
+
+            /* Keep side column sections (Skills, Education) together */
+            .side-col .section {
+                page-break-inside: avoid;
+            }
+
+            .skill-category {
+                margin-bottom: 8px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-main">
+                <h1>Deniz Ozkan</h1>
+                <h2>Lead 3D Artist · Character & Environment · Tech Art</h2>
+                <div class="header-tagline">
+                    14+ Years Experience · Delivering polished visuals optimized for Mobile, PC & VR. <br>
+                    Bridging the gap between Artistic Vision and Technical Execution.
+                </div>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:dozkanart@gmail.com">dozkanart@gmail.com</a>
+                <span>Istanbul, Turkey</span>
+                <!-- Phone Number Removed for Web Version -->
+                <div>
+                    <a href="https://www.artstation.com/denizozkan" target="_blank">ArtStation Portfolio</a> |
+                    <a href="https://github.com/denizozkanart" target="_blank">GitHub</a> |
+                    <a href="https://www.linkedin.com/in/denizozkanart/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <!-- LEFT COLUMN: EXPERIENCE & BIO -->
+            <main class="main-col">
+
+                <section class="section">
+                    <h3 class="section-title">Professional Summary</h3>
+                    <div class="summary">
+                        <p>
+                            14+ years of professional experience in 3D design, with 8 years specialized in Game Art
+                            production.
+                            I combine creative vision with technical precision, mastering both artistic roles
+                            (Lead/Senior Character & Environment) and technical pipelines (Optimization, Shaders,
+                            Tools). My background spans realistic to stylized workflows, having shipped titles across
+                            Mobile, PC, and VR platforms.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Experience</h3>
+
+                    <!-- SOLO DEV -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-title">Solo Game Developer & Technical Artist</span>
+                            <span class="job-date">Mar 2025 – Present</span>
+                        </div>
+                        <span class="job-company">Independent (Personal R&D)</span>
+                        <ul class="job-desc">
+                            <li>Developing a complete Match‑3 prototype in Unity, handling C# logic, UI, and all 3D art
+                                assets.</li>
+                            <li>Creating custom automation tools (Python/Blender API) to accelerate asset pipelines and
+                                reduce manual repetitive tasks.</li>
+                            <li>Conducting R&D in Unreal Engine 5, utilizing Custom Metahumans for high-fidelity
+                                realistic characters.</li>
+                            <li>Integrating AI-assisted workflows for rapid character concepting and texture generation.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- HIFIVE -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-title">Lead 3D Artist</span>
+                            <span class="job-date">Aug 2024 – Mar 2025</span>
+                        </div>
+                        <span class="job-company">Hifive Games (Mobile)</span>
+                        <ul class="job-desc">
+                            <li>Led 3D character art for a new mobile title, overseeing the pipeline from concept to
+                                Unity integration.</li>
+                            <li>Delivered stylized low‑poly characters that strengthened the game's visual identity.
+                            </li>
+                            <li>Optimized meshes and materials, ensuring high performance on mobile devices without
+                                sacrificing quality.</li>
+                        </ul>
+                    </div>
+
+                    <!-- BLOCKVILLE -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-title">Lead 3D Character Artist</span>
+                            <span class="job-date">Mar 2023 – Nov 2023</span>
+                        </div>
+                        <span class="job-company">Blockville Digital Assets (Contract)</span>
+                        <ul class="job-desc">
+                            <li>Produced stylized characters for the Steam RPG "Obilia", handling sculpting, texturing,
+                                and game-engine setup.</li>
+                            <li>Created a diverse cast of low‑poly characters, maintaining strict stylistic consistency.
+                            </li>
+                            <li>Implemented an automated rigging pipeline that significantly reduced character
+                                turnaround time.</li>
+                        </ul>
+                    </div>
+
+                    <!-- VIRTUAL PROJECTS -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-title">Lead Character Artist</span>
+                            <span class="job-date">Aug 2022 – Mar 2023</span>
+                        </div>
+                        <span class="job-company">Virtual Projects (Project-Based)</span>
+                        <ul class="job-desc">
+                            <li>Created historically inspired characters for the AR experience "Dreal", focusing on
+                                cultural accuracy.</li>
+                            <li>Utilized Character Creator, 3ds Max, and ZBrush for efficient high/low poly character
+                                modeling.</li>
+                            <li>Delivered optimized rigs and assets compatible with Unity and Lens Studio requirements.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- GLITCH STUDIOS -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-title">Lead 3D Generalist</span>
+                            <span class="job-date">Aug 2020 – Aug 2021</span>
+                        </div>
+                        <span class="job-company">Glitch Studios (Contract)</span>
+                        <ul class="job-desc">
+                            <li>Optimized photogrammetry-based 3D assets for the VR title "Roald Amundsen's House",
+                                improving performance for real-time use.</li>
+                            <li>Transformed CAD and industrial data into game-ready PBR assets with clean topology.</li>
+                            <li>Managed the visual quality benchmark for cultural and tech-focused VR applications.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CODEMODEON -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-title">Lead 3D Game Artist (VR)</span>
+                            <span class="job-date">Jan 2018 – Jul 2020</span>
+                        </div>
+                        <span class="job-company">Codemodeon (Interactive VR/AR)</span>
+                        <ul class="job-desc">
+                            <li>Led visual design and Unity implementation of "Canoe VR" from initial concept to final
+                                build.</li>
+                            <li>Designed, modeled, and integrated VR environments and props for custom VR simulations.
+                            </li>
+                            <li>Handled art-side technical tasks, resolving performance bottlenecks and real-time
+                                pipeline issues.</li>
+                        </ul>
+                    </div>
+
+                    <!-- INDUSTRIAL BACKGROUND -->
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-title">Industrial Design & 3D Visualization</span>
+                            <span class="job-date">Sep 2012 – Feb 2017</span>
+                        </div>
+                        <span class="job-company">Outdoor Factory · Urart · Yakamoz</span>
+                        <ul class="job-desc">
+                            <li><strong>Outdoor Factory:</strong> Modeled stylized characters and large-scale mockups
+                                for theme parks (e.g., Wonderland Eurasia).</li>
+                            <li><strong>Urart:</strong> Produced industrial designs and high-quality renders for luxury
+                                brands, managing the full 3D pipeline.</li>
+                            <li><strong>Yakamoz:</strong> Designed decorative objects and established production-ready
+                                3D workflows for manufacturing.</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </main>
+
+            <!-- RIGHT COLUMN: SKILLS & INFO -->
+            <aside class="side-col">
+                <section class="section">
+                    <h3 class="section-title">Technical Expertise</h3>
+
+                    <div class="skill-category">
+                        <span class="skill-cat-title">Game Engines & Tech</span>
+                        <div class="skill-list">
+                            <span class="skill-pill">Unity (URP/HDRP)</span>
+                            <span class="skill-pill">Unreal Engine 5</span>
+                            <span class="skill-pill">Optimization</span>
+                            <span class="skill-pill">Shader Graph</span>
+                            <span class="skill-pill">Metahumans</span>
+                            <span class="skill-pill">VFX Graph</span>
+                            <span class="skill-pill">Git / Perforce</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="skill-cat-title">Development & Tools</span>
+                        <div class="skill-list">
+                            <span class="skill-pill">C# (AI-Assisted Prototyping)</span>
+                            <span class="skill-pill">Python (AI-Assisted Tools)</span>
+                            <span class="skill-pill">MaxScript</span>
+                            <span class="skill-pill">Blueprints</span>
+                            <span class="skill-pill">AI Workflows</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Artistic Skills</h3>
+
+                    <div class="skill-category">
+                        <span class="skill-cat-title">Core Competencies</span>
+                        <div class="skill-list">
+                            <span class="skill-pill">High-Poly Sculpting</span>
+                            <span class="skill-pill">Retopology</span>
+                            <span class="skill-pill">PBR Texturing</span>
+                            <span class="skill-pill">Stylized Art</span>
+                            <span class="skill-pill">Photorealism</span>
+                            <span class="skill-pill">Anatomy</span>
+                            <span class="skill-pill">Hard Surface</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="skill-cat-title">Software Stack</span>
+                        <div class="skill-list">
+                            <span class="skill-pill">ZBrush</span>
+                            <span class="skill-pill">Blender</span>
+                            <span class="skill-pill">3ds Max</span>
+                            <span class="skill-pill">Maya</span>
+                            <span class="skill-pill">Substance Painter</span>
+                            <span class="skill-pill">Marmoset</span>
+                            <span class="skill-pill">Photoshop</span>
+                            <span class="skill-pill">Character Creator</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Languages</h3>
+                    <div class="lang-item">
+                        <span class="edu-school">Turkish</span>
+                        <span class="edu-degree">Native</span>
+                    </div>
+                    <div class="lang-item">
+                        <span class="edu-school">English</span>
+                        <span class="edu-degree">Professional Working Proficiency</span>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Education</h3>
+                    <div class="edu-item">
+                        <span class="edu-school">Anadolu University</span>
+                        <span class="edu-degree">BFA in Glass Design · 2006 – 2011</span>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3 class="section-title">Interests</h3>
+                    <p style="font-size:13px; color:var(--secondary);">Digital Painting, Caricature, Music Production,
+                        Basketball, Gaming.</p>
+                </section>
+
+            </aside>
+        </div>
+    </div>
+
+</body>
+
+</html>
