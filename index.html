@@ -418,13 +418,24 @@
                 margin-bottom: 1px !important;
             }
 
-            /* Keep side column sections (Skills, Education) together */
+            /* Let side sections flow across pages so page 1 fills;
+               keep each skill category (title + pills) intact */
             .side-col .section {
-                page-break-inside: avoid;
+                page-break-inside: auto;
             }
 
             .skill-category {
                 margin-bottom: 8px !important;
+            }
+
+            /* Keep a category heading with its first pills, but let the
+               pill list itself flow across the page boundary to fill page 1 */
+            .skill-cat-title {
+                page-break-after: avoid;
+            }
+
+            .section-title {
+                page-break-after: avoid;
             }
         }
     </style>
@@ -445,7 +456,7 @@
             </div>
             <div class="contact-info">
                 <a href="mailto:dozkanart@gmail.com">dozkanart@gmail.com</a>
-                <span>Istanbul, Turkey</span>
+                <span>Kadıköy, Istanbul, Turkey</span>
                 <!-- Phone Number Removed for Web Version -->
                 <div>
                     <a href="https://www.artstation.com/denizozkan" target="_blank">ArtStation Portfolio</a> |
@@ -607,15 +618,28 @@
                     <h3 class="section-title">Artistic Skills</h3>
 
                     <div class="skill-category">
-                        <span class="skill-cat-title">Core Competencies</span>
+                        <span class="skill-cat-title">Modeling</span>
                         <div class="skill-list">
                             <span class="skill-pill">High-Poly Sculpting</span>
+                            <span class="skill-pill">Low-Poly Modeling</span>
+                            <span class="skill-pill">Hard Surface</span>
+                            <span class="skill-pill">Blocking</span>
                             <span class="skill-pill">Retopology</span>
+                            <span class="skill-pill">Reference-based Modeling</span>
+                            <span class="skill-pill">Technical Modeling</span>
+                            <span class="skill-pill">Anatomy</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="skill-cat-title">Texturing & Look-Dev</span>
+                        <div class="skill-list">
+                            <span class="skill-pill">UV Mapping</span>
+                            <span class="skill-pill">Baking</span>
                             <span class="skill-pill">PBR Texturing</span>
+                            <span class="skill-pill">Hand-Painted Textures</span>
                             <span class="skill-pill">Stylized Art</span>
                             <span class="skill-pill">Photorealism</span>
-                            <span class="skill-pill">Anatomy</span>
-                            <span class="skill-pill">Hard Surface</span>
                         </div>
                     </div>
 
