@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for Fuse Rush: Rope Puzzle by Kyro Games.">
+<title>Fuse Rush Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap">
+<style>
+  /* Layout: one readable column, a game-style header plate, the two languages behind a switch. */
+  :root {
+    --bg: #f5f6fb;
+    --paper: #ffffff;
+    --ink: #1b2350;
+    --muted: #5b638c;
+    --navy: #22348f;
+    --gold: #f2b221;
+    --gold-ink: #6b4300;
+    --line: #dfe3f2;
+    --chip: #eef1fb;
+    --on-navy: #ffffff;
+    --display: "Lilita One", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+    --body: "Nunito", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1230; --paper: #151c45; --ink: #e9ecfb; --muted: #a8afd6; --navy: #8ea4ff;
+      --gold: #f6c446; --gold-ink: #241800; --line: #28316a; --chip: #1d2558; --on-navy: #0d1230; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d1230; --paper: #151c45; --ink: #e9ecfb; --muted: #a8afd6; --navy: #8ea4ff;
+    --gold: #f6c446; --gold-ink: #241800; --line: #28316a; --chip: #1d2558; --on-navy: #0d1230; color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; }
+
+  header.plate {
+    background: var(--navy);
+    color: var(--on-navy);
+    border-radius: 18px;
+    padding: 22px 22px 20px;
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.18), 0 0 0 4px var(--gold);
+    margin: 4px 4px 28px;
+  }
+  .eyebrow { font-weight: 800; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; }
+  h1 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 6vw, 42px); line-height: 1.1; margin: 6px 0 8px; text-wrap: balance; }
+  .meta { font-size: 14px; opacity: 0.9; margin: 0; }
+
+  .switch { display: flex; gap: 8px; margin: 0 0 22px; flex-wrap: wrap; }
+  .switch button {
+    font: 800 14px var(--body);
+    color: var(--ink);
+    background: var(--chip);
+    border: 2px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 16px;
+    cursor: pointer;
+  }
+  .switch button[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--gold-ink); }
+  .switch button:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+
+  .summary {
+    background: var(--paper);
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 26px;
+  }
+  .summary p { margin: 0; font-weight: 600; }
+  .summary ul { margin: 10px 0 0; padding-left: 20px; }
+
+  section { margin-bottom: 22px; }
+  h2 { font-family: var(--display); font-weight: 400; font-size: 22px; color: var(--navy); margin: 0 0 6px; text-wrap: balance; }
+  p, li { max-width: 65ch; }
+  p { margin: 0 0 10px; }
+  ul { margin: 0 0 10px; padding-left: 20px; }
+  .muted { color: var(--muted); }
+  .contact {
+    display: inline-block;
+    font-weight: 800;
+    background: var(--chip);
+    border: 2px dashed var(--line);
+    border-radius: 10px;
+    padding: 4px 10px;
+    color: var(--navy);
+    text-decoration: none;
+    user-select: all;
+  }
+  footer { border-top: 2px solid var(--line); padding-top: 14px; margin-top: 30px; font-size: 14px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="plate">
+    <div class="eyebrow">Kyro Games</div>
+    <h1>Fuse Rush: Rope Puzzle</h1>
+    <p class="meta" data-lang="en">Privacy Policy · Effective 14 October 2026</p>
+    <p class="meta" data-lang="tr" hidden>Gizlilik Politikası · Yürürlük tarihi: 14 Ekim 2026</p>
+  </header>
+
+  <div class="switch" role="group" aria-label="Language">
+    <button type="button" id="btn-en" aria-pressed="true" data-set="en">English</button>
+    <button type="button" id="btn-tr" aria-pressed="false" data-set="tr">Türkçe</button>
+  </div>
+
+  <article data-lang="en" lang="en">
+    <div class="summary">
+      <p>In short: Fuse Rush does not collect, sell or share your personal data.</p>
+      <ul>
+        <li>No account or sign-in.</li>
+        <li>No advertising, analytics or tracking in the current version.</li>
+        <li>Your game progress stays on your device.</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>Who we are</h2>
+      <p>Fuse Rush: Rope Puzzle ("the game") is a puzzle game for iPhone and iPad made by Kyro Games ("we", "us"). This policy explains what happens to information when you play it.</p>
+    </section>
+
+    <section>
+      <h2>Information we collect</h2>
+      <p>We do not collect any personal information. The game does not ask for your name, email address, phone number, contacts, photos, location or any other personal details, and it does not use device or advertising identifiers.</p>
+    </section>
+
+    <section>
+      <h2>Information stored on your device</h2>
+      <p>To remember where you are, the game saves your progress on your own device: the level you reached, coins, lives, boosters and settings such as sound, music and vibration. This data never leaves your device and is not sent to us. Deleting the game deletes it.</p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <p>The game does not request access to the camera, microphone, photos, contacts or location. It uses the device's vibration for touch feedback, which you can switch off in the game's settings.</p>
+    </section>
+
+    <section>
+      <h2>Third parties</h2>
+      <p>The current version contains no third-party advertising, analytics or tracking services. Apple processes downloads, and any purchases, under <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a>.</p>
+      <p>If you test a pre-release version through TestFlight, Apple may share with us the crash reports and feedback you choose to send, as described in Apple's TestFlight terms. We use these only to fix problems in the game.</p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>The game is made for a general audience. We do not knowingly collect personal information from anyone, including children under 13 (or the equivalent minimum age in your country).</p>
+    </section>
+
+    <section>
+      <h2>Your rights</h2>
+      <p>Depending on where you live, laws such as the GDPR (EU and UK), Türkiye's KVKK (Law No. 6698) and the CCPA (California) give you rights over your personal data, including access and deletion. Because we hold no personal data about you, there is nothing for us to access, correct or delete. You can contact us with any question.</p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>If a future version adds advertising, analytics or in-app purchases, we will update this policy before that version is released, update the privacy details on the App Store, and ask for your permission where the law or Apple requires it. The date at the top shows when the policy last changed.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Kyro Games · <a class="contact" href="mailto:dozkanart@gmail.com">dozkanart@gmail.com</a></p>
+    </section>
+  </article>
+
+  <article data-lang="tr" lang="tr" hidden>
+    <div class="summary">
+      <p>Kısaca: Fuse Rush kişisel verilerinizi toplamaz, satmaz ve kimseyle paylaşmaz.</p>
+      <ul>
+        <li>Hesap açma veya giriş yapma yoktur.</li>
+        <li>Mevcut sürümde reklam, analiz veya takip yoktur.</li>
+        <li>Oyun ilerlemeniz cihazınızda kalır.</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2>Biz kimiz</h2>
+      <p>Fuse Rush: Rope Puzzle ("oyun"), Kyro Games ("biz") tarafından iPhone ve iPad için geliştirilen bir bulmaca oyunudur. Bu politika, oyunu oynarken bilgilerinize ne olduğunu açıklar.</p>
+    </section>
+
+    <section>
+      <h2>Topladığımız bilgiler</h2>
+      <p>Hiçbir kişisel bilgi toplamıyoruz. Oyun adınızı, e-posta adresinizi, telefon numaranızı, rehberinizi, fotoğraflarınızı, konumunuzu veya başka bir kişisel bilginizi istemez; cihaz ya da reklam kimliklerini kullanmaz.</p>
+    </section>
+
+    <section>
+      <h2>Cihazınızda saklanan bilgiler</h2>
+      <p>Kaldığınız yeri hatırlamak için oyun ilerlemenizi kendi cihazınızda saklar: ulaştığınız level, coin'ler, canlar, güçlendiriciler ve ses, müzik, titreşim gibi ayarlar. Bu veriler cihazınızdan çıkmaz ve bize gönderilmez. Oyunu silmek bu verileri de siler.</p>
+    </section>
+
+    <section>
+      <h2>İzinler</h2>
+      <p>Oyun kamera, mikrofon, fotoğraflar, rehber veya konum erişimi istemez. Dokunma geri bildirimi için cihazın titreşimini kullanır; bunu oyunun ayarlarından kapatabilirsiniz.</p>
+    </section>
+
+    <section>
+      <h2>Üçüncü taraflar</h2>
+      <p>Mevcut sürümde üçüncü taraf reklam, analiz veya takip hizmeti bulunmaz. İndirmeler ve olası satın almalar Apple tarafından, <a href="https://www.apple.com/tr/legal/privacy/" rel="noopener">Apple Gizlilik Politikası</a> kapsamında işlenir.</p>
+      <p>Yayın öncesi bir sürümü TestFlight üzerinden test ederseniz, Apple, göndermeyi seçtiğiniz çökme raporlarını ve geri bildirimleri TestFlight koşulları çerçevesinde bizimle paylaşabilir. Bunları yalnızca oyundaki sorunları düzeltmek için kullanırız.</p>
+    </section>
+
+    <section>
+      <h2>Çocuklar</h2>
+      <p>Oyun genel kitle için yapılmıştır. 13 yaşından küçük çocuklar (veya ülkenizdeki asgari yaş) dahil hiç kimseden bilerek kişisel bilgi toplamayız.</p>
+    </section>
+
+    <section>
+      <h2>Haklarınız</h2>
+      <p>Yaşadığınız yere göre KVKK (6698 sayılı Kişisel Verilerin Korunması Kanunu), GDPR (AB ve Birleşik Krallık) ve CCPA (Kaliforniya) gibi yasalar size kişisel verilerinize erişme ve silinmesini isteme gibi haklar tanır. Hakkınızda hiçbir kişisel veri tutmadığımız için erişilecek, düzeltilecek veya silinecek bir veri yoktur. Her türlü sorunuz için bize ulaşabilirsiniz.</p>
+    </section>
+
+    <section>
+      <h2>Bu politikadaki değişiklikler</h2>
+      <p>Gelecekteki bir sürüme reklam, analiz veya uygulama içi satın alma eklenirse, o sürüm yayınlanmadan önce bu politikayı ve App Store'daki gizlilik bilgilerini güncelleriz; yasaların veya Apple'ın gerektirdiği durumlarda izninizi isteriz. En üstteki tarih politikanın en son ne zaman değiştiğini gösterir.</p>
+    </section>
+
+    <section>
+      <h2>İletişim</h2>
+      <p>Kyro Games · <a class="contact" href="mailto:dozkanart@gmail.com">dozkanart@gmail.com</a></p>
+    </section>
+  </article>
+
+  <footer>
+    <span data-lang="en">© 2026 Kyro Games. Fuse Rush is a game by Kyro Games.</span>
+    <span data-lang="tr" hidden>© 2026 Kyro Games. Fuse Rush, Kyro Games'in bir oyunudur.</span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('.switch button');
+    function show(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-set') === lang ? 'true' : 'false'); });
+      document.documentElement.lang = lang;
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-set')); }); });
+    var start = location.hash === '#tr' ? 'tr' : location.hash === '#en' ? 'en' : ((navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en');
+    show(start);
+  })();
+</script>
+</body>
+</html>
